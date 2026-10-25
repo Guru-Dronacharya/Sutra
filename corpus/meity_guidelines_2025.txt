@@ -1,0 +1,32 @@
+================================================================================
+INSTRUMENT: MeitY India AI Governance Guidelines (Nov 2025)
+STATUS: SAMPLE – NOT OFFICIAL TEXT. FOR DEMO & BENCHMARK PURPOSES ONLY.
+DISCLAIMER: Decision-support information only; not legal advice.
+================================================================================
+
+[SUTRA 1] Sutra 1: Safety and Trust
+[SAMPLE – NOT OFFICIAL TEXT] AI systems must undergo pre-deployment vulnerability testing, red-teaming for prompt injection and jailbreaking, and stress-testing under adversarial conditions to protect individual safety and critical societal infrastructure.
+
+[SUTRA 2] Sutra 2: Fairness and Non-Discrimination
+[SAMPLE – NOT OFFICIAL TEXT] AI systems deployed across public services, credit, and employment must actively measure and mitigate algorithmic bias across caste, religion, region, gender, and linguistic background.
+
+[SUTRA 3] Sutra 3: Transparency and Explainability
+[SAMPLE – NOT OFFICIAL TEXT] AI deployers must provide transparent disclosures regarding model limitations, training datasets lineage, and clear explanations for adverse automated outcomes affecting citizens.
+
+[SUTRA 4] Sutra 4: Accountability and Human Agency
+[SAMPLE – NOT OFFICIAL TEXT] Automated systems producing legal, financial, or material impacts on natural persons must maintain human oversight and meaningful human intervention capabilities at all operational stages.
+
+[SUTRA 5] Sutra 5: Inclusivity and Linguistic Diversity
+[SAMPLE – NOT OFFICIAL TEXT] AI models should demonstrate equitable performance across India's scheduled languages and prevent exclusionary performance disparities for non-English speakers.
+
+[SUTRA 6] Sutra 6: Privacy and Data Protection
+[SAMPLE – NOT OFFICIAL TEXT] AI pipelines must incorporate privacy-by-design, automated PII sanitization, and strict safeguards against model inversion or prompt-based exfiltration of personal records.
+
+[SUTRA 7] Sutra 7: Human-Centric Innovation
+[SAMPLE – NOT OFFICIAL TEXT] AI deployments must align with constitutional ethics, enhance democratic participation, and uphold fundamental rights.
+
+[PILLAR 1] Pillar 1: Robustness and Security
+[SAMPLE – NOT OFFICIAL TEXT] Organizations must implement fail-safe architectures, input validation proxies, and automated containment mechanisms for out-of-distribution inputs.
+
+[PILLAR 4] Pillar 4: Transparency and Accountability
+[SAMPLE – NOT OFFICIAL TEXT] Organizations must maintain tamper-evident audit trails recording model inputs, governance decisions, and rationale outputs for regulatory inspection.

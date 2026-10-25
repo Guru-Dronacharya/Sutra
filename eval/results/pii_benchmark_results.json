@@ -1,0 +1,428 @@
+{
+  "summary": {
+    "total_test_cases": 30,
+    "micro_precision": 1.0,
+    "micro_recall": 1.0,
+    "micro_f1": 1.0,
+    "macro_f1": 1.0,
+    "avg_latency_ms": 0.086
+  },
+  "per_entity_metrics": {
+    "AADHAAR": {
+      "true_positives": 4,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "PAN": {
+      "true_positives": 4,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "PHONE_IN": {
+      "true_positives": 5,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "IFSC": {
+      "true_positives": 3,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "GSTIN": {
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "UPI_ID": {
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "VOTER_ID": {
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "PASSPORT_IN": {
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "EMAIL_ADDRESS": {
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "CREDIT_CARD": {
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    }
+  },
+  "case_results": [
+    {
+      "id": "PII_01",
+      "text": "My Aadhaar number is 3675 9834 6016 and my PAN card is ABCPE1234F.",
+      "expected": [
+        "AADHAAR",
+        "PAN"
+      ],
+      "detected": [
+        "AADHAAR",
+        "PAN"
+      ],
+      "latency_ms": 0.193,
+      "match": true
+    },
+    {
+      "id": "PII_02",
+      "text": "Mera aadhaar card 3675 9834 6016 verify kar do urgently.",
+      "expected": [
+        "AADHAAR"
+      ],
+      "detected": [
+        "AADHAAR"
+      ],
+      "latency_ms": 0.104,
+      "match": true
+    },
+    {
+      "id": "PII_03",
+      "text": "Please update my account PAN to BKZPK7190K as requested by branch manager.",
+      "expected": [
+        "PAN"
+      ],
+      "detected": [
+        "PAN"
+      ],
+      "latency_ms": 0.079,
+      "match": true
+    },
+    {
+      "id": "PII_04",
+      "text": "Call me on +91 9876543210 or 9123456789 for KYC document collection.",
+      "expected": [
+        "PHONE_IN",
+        "PHONE_IN"
+      ],
+      "detected": [
+        "PHONE_IN",
+        "PHONE_IN"
+      ],
+      "latency_ms": 0.082,
+      "match": true
+    },
+    {
+      "id": "PII_05",
+      "text": "Transfer amount to account with IFSC code HDFC0000001 please.",
+      "expected": [
+        "IFSC"
+      ],
+      "detected": [
+        "IFSC"
+      ],
+      "latency_ms": 0.278,
+      "match": true
+    },
+    {
+      "id": "PII_06",
+      "text": "Company GSTIN registration is 27AAAAA0000A1Z5 for Maharashtra operations.",
+      "expected": [
+        "GSTIN"
+      ],
+      "detected": [
+        "GSTIN"
+      ],
+      "latency_ms": 0.082,
+      "match": true
+    },
+    {
+      "id": "PII_07",
+      "text": "Bhai mere UPI ID rajesh.kumar@okhdfcbank pe 500 bhej do.",
+      "expected": [
+        "UPI_ID"
+      ],
+      "detected": [
+        "UPI_ID"
+      ],
+      "latency_ms": 0.205,
+      "match": true
+    },
+    {
+      "id": "PII_08",
+      "text": "Citizen Voter ID EPIC number is ABC1234567 submitted for verification.",
+      "expected": [
+        "VOTER_ID"
+      ],
+      "detected": [
+        "VOTER_ID"
+      ],
+      "latency_ms": 0.077,
+      "match": true
+    },
+    {
+      "id": "PII_09",
+      "text": "Indian passport number is J1234567 valid till 2032.",
+      "expected": [
+        "PASSPORT_IN"
+      ],
+      "detected": [
+        "PASSPORT_IN"
+      ],
+      "latency_ms": 0.057,
+      "match": true
+    },
+    {
+      "id": "PII_10",
+      "text": "Contact compliance officer at compliance.officer@finsure.co.in directly.",
+      "expected": [
+        "EMAIL_ADDRESS"
+      ],
+      "detected": [
+        "EMAIL_ADDRESS"
+      ],
+      "latency_ms": 0.068,
+      "match": true
+    },
+    {
+      "id": "PII_11",
+      "text": "Aadhaar: 3675-9834-6016, PAN: ABCPE1234F, Phone: 9876543210, IFSC: SBIN0001234",
+      "expected": [
+        "AADHAAR",
+        "PAN",
+        "PHONE_IN",
+        "IFSC"
+      ],
+      "detected": [
+        "AADHAAR",
+        "PAN",
+        "PHONE_IN",
+        "IFSC"
+      ],
+      "latency_ms": 0.128,
+      "match": true
+    },
+    {
+      "id": "PII_12",
+      "text": "Mera email id priya.sharma99@gmail.com aur mobile 8765432109 hai.",
+      "expected": [
+        "EMAIL_ADDRESS",
+        "PHONE_IN"
+      ],
+      "detected": [
+        "EMAIL_ADDRESS",
+        "PHONE_IN"
+      ],
+      "latency_ms": 0.075,
+      "match": true
+    },
+    {
+      "id": "PII_13",
+      "text": "Merchant payment handle is store.billing@paytm for instant checkout.",
+      "expected": [
+        "UPI_ID"
+      ],
+      "detected": [
+        "UPI_ID"
+      ],
+      "latency_ms": 0.062,
+      "match": true
+    },
+    {
+      "id": "PII_14",
+      "text": "GST registration certificate shows 07AAAAA1111A1Z9 for Delhi unit.",
+      "expected": [
+        "GSTIN"
+      ],
+      "detected": [
+        "GSTIN"
+      ],
+      "latency_ms": 0.062,
+      "match": true
+    },
+    {
+      "id": "PII_15",
+      "text": "Customer voter card EPIC XYZ9876543 attached with residential proof.",
+      "expected": [
+        "VOTER_ID"
+      ],
+      "detected": [
+        "VOTER_ID"
+      ],
+      "latency_ms": 0.062,
+      "match": true
+    },
+    {
+      "id": "PII_16",
+      "text": "Passport details: Passport No Z9876543 issued at RPO Mumbai.",
+      "expected": [
+        "PASSPORT_IN"
+      ],
+      "detected": [
+        "PASSPORT_IN"
+      ],
+      "latency_ms": 0.059,
+      "match": true
+    },
+    {
+      "id": "PII_17",
+      "text": "Branch RTGS code is ICIC0000104 for corporate wire transfers.",
+      "expected": [
+        "IFSC"
+      ],
+      "detected": [
+        "IFSC"
+      ],
+      "latency_ms": 0.058,
+      "match": true
+    },
+    {
+      "id": "PII_18",
+      "text": "Sir mera PAN number ABCPF1234Z aur aadhaar 367598346016 dono link nahi ho rahe.",
+      "expected": [
+        "PAN",
+        "AADHAAR"
+      ],
+      "detected": [
+        "PAN",
+        "AADHAAR"
+      ],
+      "latency_ms": 0.093,
+      "match": true
+    },
+    {
+      "id": "PII_19",
+      "text": "Credit card number 4111111111111111 was charged fraudulently.",
+      "expected": [
+        "CREDIT_CARD"
+      ],
+      "detected": [
+        "CREDIT_CARD"
+      ],
+      "latency_ms": 0.088,
+      "match": true
+    },
+    {
+      "id": "PII_20",
+      "text": "Support helpline is +91-9988776655 available 24/7.",
+      "expected": [
+        "PHONE_IN"
+      ],
+      "detected": [
+        "PHONE_IN"
+      ],
+      "latency_ms": 0.055,
+      "match": true
+    },
+    {
+      "id": "PII_NEG_01",
+      "text": "The model architecture has 7 billion parameters and 32 attention heads.",
+      "expected": [],
+      "detected": [],
+      "latency_ms": 0.061,
+      "match": true
+    },
+    {
+      "id": "PII_NEG_02",
+      "text": "Tracking order ID 123456789012 for the logistics consignment.",
+      "expected": [],
+      "detected": [],
+      "latency_ms": 0.053,
+      "match": true
+    },
+    {
+      "id": "PII_NEG_03",
+      "text": "Random code 123456789012 is not an Aadhaar card because it fails Verhoeff checksum.",
+      "expected": [],
+      "detected": [],
+      "latency_ms": 0.091,
+      "match": true
+    },
+    {
+      "id": "PII_NEG_04",
+      "text": "Invalid PAN code 12345ABCDE does not follow Indian Income Tax format.",
+      "expected": [],
+      "detected": [],
+      "latency_ms": 0.058,
+      "match": true
+    },
+    {
+      "id": "PII_NEG_05",
+      "text": "This invoice total is INR 45,000 for server maintenance in October 2026.",
+      "expected": [],
+      "detected": [],
+      "latency_ms": 0.061,
+      "match": true
+    },
+    {
+      "id": "PII_NEG_06",
+      "text": "The Reserve Bank of India issued guidelines on responsible AI governance.",
+      "expected": [],
+      "detected": [],
+      "latency_ms": 0.057,
+      "match": true
+    },
+    {
+      "id": "PII_NEG_07",
+      "text": "Error code 404 not found returned from internal gateway router.",
+      "expected": [],
+      "detected": [],
+      "latency_ms": 0.052,
+      "match": true
+    },
+    {
+      "id": "PII_NEG_08",
+      "text": "Temperature parameter set to 0.7 with top_p of 0.95 for creative output.",
+      "expected": [],
+      "detected": [],
+      "latency_ms": 0.065,
+      "match": true
+    },
+    {
+      "id": "PII_NEG_09",
+      "text": "Software version 2.4.1 deployed to staging cluster successfully.",
+      "expected": [],
+      "detected": [],
+      "latency_ms": 0.055,
+      "match": true
+    },
+    {
+      "id": "PII_NEG_10",
+      "text": "Please summarize the DPDP Act 2023 provisions regarding data fiduciaries.",
+      "expected": [],
+      "detected": [],
+      "latency_ms": 0.06,
+      "match": true
+    }
+  ]
+}

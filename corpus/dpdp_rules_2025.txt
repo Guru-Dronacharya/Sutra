@@ -1,0 +1,17 @@
+================================================================================
+INSTRUMENT: Digital Personal Data Protection Rules, 2025
+STATUS: SAMPLE – NOT OFFICIAL TEXT. FOR DEMO & BENCHMARK PURPOSES ONLY.
+DISCLAIMER: Decision-support information only; not legal advice.
+================================================================================
+
+[RULE 3] Standard Form of Privacy Notice
+[SAMPLE – NOT OFFICIAL TEXT] Notices issued under Section 5 of the Act must be accessible in English and any of the 22 languages specified in the Eighth Schedule to the Constitution. The notice must specify the exact data fields collected, retention periods, third-party processor details, and direct contact details of the Grievance Officer.
+
+[RULE 7] Mandatory Data Breach Notification Timelines
+[SAMPLE – NOT OFFICIAL TEXT] In the event of a personal data breach, the Data Fiduciary must submit an initial preliminary breach notification to the Data Protection Board of India and affected Data Principals within 72 hours of becoming aware of the breach, followed by a comprehensive forensic report within 14 calendar days.
+
+[RULE 11] Mechanisms for Verifiable Parental Consent
+[SAMPLE – NOT OFFICIAL TEXT] Data Fiduciaries collecting data of individuals below 18 years must verify parental identity through trusted electronic authentication frameworks, Government-issued identifiers (without permanent retention of identity tokens), or tokenized verification mechanisms.
+
+[RULE 14] Data Protection Impact Assessment (DPIA) Methodology
+[SAMPLE – NOT OFFICIAL TEXT] Significant Data Fiduciaries deploying algorithmic or automated decision-making systems must conduct DPIAs assessing algorithmic fairness, demographic parity, data minimization, and risk of automated discrimination prior to system launch.

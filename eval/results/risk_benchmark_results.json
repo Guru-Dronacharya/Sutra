@@ -1,0 +1,504 @@
+{
+  "summary": {
+    "total_profiles": 40,
+    "correct_tier_predictions": 40,
+    "tier_accuracy": 1.0,
+    "eu_crosswalk_evaluated": 12,
+    "eu_crosswalk_correct": 12,
+    "eu_crosswalk_accuracy": 1.0
+  },
+  "confusion_matrix": {
+    "low": {
+      "low": 9,
+      "medium": 0,
+      "high": 0,
+      "prohibited": 0
+    },
+    "medium": {
+      "low": 0,
+      "medium": 9,
+      "high": 0,
+      "prohibited": 0
+    },
+    "high": {
+      "low": 0,
+      "medium": 0,
+      "high": 15,
+      "prohibited": 0
+    },
+    "prohibited": {
+      "low": 0,
+      "medium": 0,
+      "high": 0,
+      "prohibited": 7
+    }
+  },
+  "class_metrics": {
+    "low": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 9
+    },
+    "medium": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 9
+    },
+    "high": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 15
+    },
+    "prohibited": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 7
+    }
+  },
+  "detailed_results": [
+    {
+      "id": "P01",
+      "name": "Internal IT Helpdesk FAQ Bot",
+      "expected_tier": "low",
+      "computed_tier": "low",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 5.0
+    },
+    {
+      "id": "P02",
+      "name": "Code Completion Assistant for Devs",
+      "expected_tier": "low",
+      "computed_tier": "low",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 5.0
+    },
+    {
+      "id": "P03",
+      "name": "Internal Knowledge Base Search",
+      "expected_tier": "low",
+      "computed_tier": "low",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 5.0
+    },
+    {
+      "id": "P04",
+      "name": "Meeting Notes Summarizer",
+      "expected_tier": "low",
+      "computed_tier": "low",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 5.0
+    },
+    {
+      "id": "P05",
+      "name": "Internal Inventory Stock Alert",
+      "expected_tier": "low",
+      "computed_tier": "low",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 5.0
+    },
+    {
+      "id": "P06",
+      "name": "Customer Support Chatbot for General Inquiries",
+      "expected_tier": "medium",
+      "computed_tier": "medium",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 28.75
+    },
+    {
+      "id": "P07",
+      "name": "Marketing Copy Generation Tool",
+      "expected_tier": "medium",
+      "computed_tier": "medium",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 20.0
+    },
+    {
+      "id": "P08",
+      "name": "E-Commerce Product Recommendation",
+      "expected_tier": "medium",
+      "computed_tier": "medium",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 19.75
+    },
+    {
+      "id": "P09",
+      "name": "RBI-Regulated Bank General Chatbot",
+      "expected_tier": "medium",
+      "computed_tier": "medium",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 24.75
+    },
+    {
+      "id": "P10",
+      "name": "Synthetic Image Creator with Missing Provenance",
+      "expected_tier": "medium",
+      "computed_tier": "medium",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 26.0
+    },
+    {
+      "id": "P11",
+      "name": "Automated Credit Scoring & Loan Denial",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 58.0
+    },
+    {
+      "id": "P12",
+      "name": "Clinical Diagnostic Radiology Decision System",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 38.5
+    },
+    {
+      "id": "P13",
+      "name": "Power Grid Nuclear Station Anomaly Controller",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 29.5
+    },
+    {
+      "id": "P14",
+      "name": "Judicial Sentencing & Bail Risk Recommender",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 36.75
+    },
+    {
+      "id": "P15",
+      "name": "Children Online EdTech Adaptive Tutor",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 43.5
+    },
+    {
+      "id": "P16",
+      "name": "Automated Job Resume Screening & Rejection",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 50.5
+    },
+    {
+      "id": "P17",
+      "name": "Health Insurance Underwriting Engine",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 65.5
+    },
+    {
+      "id": "P18",
+      "name": "Railway Transit Signalling Automated Router",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 29.5
+    },
+    {
+      "id": "P19",
+      "name": "Telecom Core Network Automated Traffic Controller",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 42.0
+    },
+    {
+      "id": "P20",
+      "name": "Bank Fraud Prevention & Instant Account Freezing",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 52.75
+    },
+    {
+      "id": "P21",
+      "name": "Social Scoring Platform for Civic Privileges",
+      "expected_tier": "prohibited",
+      "computed_tier": "prohibited",
+      "tier_match": true,
+      "expected_eu_tier": "unacceptable",
+      "computed_eu_tier": "unacceptable",
+      "eu_match": true,
+      "score": 11.0
+    },
+    {
+      "id": "P22",
+      "name": "Public Space Real-Time Biometric Facial Recognition",
+      "expected_tier": "prohibited",
+      "computed_tier": "prohibited",
+      "tier_match": true,
+      "expected_eu_tier": "unacceptable",
+      "computed_eu_tier": "unacceptable",
+      "eu_match": true,
+      "score": 19.0
+    },
+    {
+      "id": "P23",
+      "name": "Subliminal Behavioral Nudging for Compulsive Gambling",
+      "expected_tier": "prohibited",
+      "computed_tier": "prohibited",
+      "tier_match": true,
+      "expected_eu_tier": "unacceptable",
+      "computed_eu_tier": "unacceptable",
+      "eu_match": true,
+      "score": 11.0
+    },
+    {
+      "id": "P24",
+      "name": "Elderly Vulnerability Exploitative Loan Marketing",
+      "expected_tier": "prohibited",
+      "computed_tier": "prohibited",
+      "tier_match": true,
+      "expected_eu_tier": "unacceptable",
+      "computed_eu_tier": "unacceptable",
+      "eu_match": true,
+      "score": 16.0
+    },
+    {
+      "id": "P25",
+      "name": "Mass Citizen Loyalty Rating Index",
+      "expected_tier": "prohibited",
+      "computed_tier": "prohibited",
+      "tier_match": true,
+      "expected_eu_tier": "unacceptable",
+      "computed_eu_tier": "unacceptable",
+      "eu_match": true,
+      "score": 11.0
+    },
+    {
+      "id": "P26",
+      "name": "EU Customer FAQ Assistant (Minimal Risk)",
+      "expected_tier": "low",
+      "computed_tier": "low",
+      "tier_match": true,
+      "expected_eu_tier": "minimal",
+      "computed_eu_tier": "minimal",
+      "eu_match": true,
+      "score": 9.0
+    },
+    {
+      "id": "P27",
+      "name": "EU Customer Support Bot (Limited Risk)",
+      "expected_tier": "medium",
+      "computed_tier": "medium",
+      "tier_match": true,
+      "expected_eu_tier": "limited",
+      "computed_eu_tier": "limited",
+      "eu_match": true,
+      "score": 32.75
+    },
+    {
+      "id": "P28",
+      "name": "EU Annex III HR Recruitment Scoring (High Risk Override)",
+      "expected_tier": "medium",
+      "computed_tier": "medium",
+      "tier_match": true,
+      "expected_eu_tier": "high",
+      "computed_eu_tier": "high",
+      "eu_match": true,
+      "score": 29.75
+    },
+    {
+      "id": "P29",
+      "name": "EU Credit Assessment Annex III Override",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": "high",
+      "computed_eu_tier": "high",
+      "eu_match": true,
+      "score": 68.0
+    },
+    {
+      "id": "P30",
+      "name": "EU Educational Exam Scoring System",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": "high",
+      "computed_eu_tier": "high",
+      "eu_match": true,
+      "score": 60.5
+    },
+    {
+      "id": "P31",
+      "name": "Internal Code Linter & Style Checker",
+      "expected_tier": "low",
+      "computed_tier": "low",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 5.0
+    },
+    {
+      "id": "P32",
+      "name": "Log File Compression Assistant",
+      "expected_tier": "low",
+      "computed_tier": "low",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 5.0
+    },
+    {
+      "id": "P33",
+      "name": "Employee Cafeteria Meal Suggester",
+      "expected_tier": "low",
+      "computed_tier": "low",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 5.0
+    },
+    {
+      "id": "P34",
+      "name": "Corporate Travel Ticket Booker",
+      "expected_tier": "medium",
+      "computed_tier": "medium",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 17.5
+    },
+    {
+      "id": "P35",
+      "name": "Vendor Invoice Data Parser",
+      "expected_tier": "medium",
+      "computed_tier": "medium",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 16.25
+    },
+    {
+      "id": "P36",
+      "name": "Automated Insurance Claims Adjudication",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 68.0
+    },
+    {
+      "id": "P37",
+      "name": "Municipal Water Pressure SCADA Predictor",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 29.5
+    },
+    {
+      "id": "P38",
+      "name": "Law Enforcement Suspect Prioritization",
+      "expected_tier": "high",
+      "computed_tier": "high",
+      "tier_match": true,
+      "expected_eu_tier": null,
+      "computed_eu_tier": null,
+      "eu_match": null,
+      "score": 45.5
+    },
+    {
+      "id": "P39",
+      "name": "School Student Emotion Recognition & Tracking",
+      "expected_tier": "prohibited",
+      "computed_tier": "prohibited",
+      "tier_match": true,
+      "expected_eu_tier": "unacceptable",
+      "computed_eu_tier": "unacceptable",
+      "eu_match": true,
+      "score": 11.0
+    },
+    {
+      "id": "P40",
+      "name": "Subliminal Flash Advertising Engine",
+      "expected_tier": "prohibited",
+      "computed_tier": "prohibited",
+      "tier_match": true,
+      "expected_eu_tier": "unacceptable",
+      "computed_eu_tier": "unacceptable",
+      "eu_match": true,
+      "score": 11.0
+    }
+  ]
+}

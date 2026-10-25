@@ -1,0 +1,197 @@
+{
+  "version": "1.0.0",
+  "disclaimer": "Decision-support information only; not legal advice.",
+  "title": "Sutra AI Risk & Compliance Questionnaire",
+  "description": "Multi-dimensional governance questionnaire aligned with MeitY India AI Guidelines, DPDP Act 2023, RBI FREE-AI Framework, and EU AI Act.",
+  "categories": [
+    {
+      "id": "prohibited_practices",
+      "name": "Prohibited Practices & Red Lines",
+      "description": "Assessment of absolute legal and ethical prohibitions under EU AI Act Article 5 and MeitY Safety Sutras.",
+      "questions": [
+        {
+          "id": "social_scoring",
+          "label": "Does the system perform social scoring or evaluation of individuals based on personal characteristics leading to detrimental or disproportionate treatment?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "EU AI Act Art. 5(1)(c); MeitY Sutra 1 (Safety & Trust)"
+        },
+        {
+          "id": "real_time_biometric_surveillance",
+          "label": "Is the system deployed for real-time remote biometric identification in publicly accessible spaces?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "EU AI Act Art. 5(1)(d); DPDP Act 2023 Sec. 9"
+        },
+        {
+          "id": "manipulative_subliminal_techniques",
+          "label": "Does the system deploy subliminal or intentionally manipulative techniques to distort human behavior causing psychological or physical harm?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "EU AI Act Art. 5(1)(a); MeitY Sutra 1"
+        },
+        {
+          "id": "vulnerability_exploitation",
+          "label": "Does the system exploit vulnerabilities of specific groups due to age, disability, or socio-economic status to distort behavior?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "EU AI Act Art. 5(1)(b); MeitY Sutra 5 (Inclusivity)"
+        }
+      ]
+    },
+    {
+      "id": "data_sensitivity",
+      "name": "Data Sensitivity & Privacy",
+      "description": "Personal and sensitive data processing profile under DPDP Act 2023 and DPDP Rules 2025.",
+      "questions": [
+        {
+          "id": "processes_personal_data",
+          "label": "Does the AI system ingest, process, or generate personal data of individuals?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "DPDP Act 2023 Sec. 2(t)"
+        },
+        {
+          "id": "sensitive_data_categories",
+          "label": "Select all sensitive data categories handled by the model:",
+          "type": "multi_select",
+          "options": ["financial", "health", "biometric", "caste_or_religion", "children", "none"],
+          "default": ["none"],
+          "legal_basis": "DPDP Act 2023 Sec. 9; RBI FREE-AI Data Governance"
+        },
+        {
+          "id": "data_volume_scale",
+          "label": "What is the expected scale of individuals whose data is processed?",
+          "type": "select",
+          "options": ["low", "medium", "high"],
+          "option_labels": {
+            "low": "Fewer than 10,000 individuals",
+            "medium": "10,000 to 1,000,000 individuals",
+            "high": "More than 1,000,000 individuals (Significant Data Fiduciary threshold)"
+          },
+          "default": "low",
+          "legal_basis": "DPDP Act 2023 Sec. 10 (SDF Criteria)"
+        },
+        {
+          "id": "processes_children_data",
+          "label": "Does the system process personal data of children (below 18 years) or provide services directly targeted to children?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "DPDP Act 2023 Sec. 9(1), 9(2) (Absolute bar on behavioral tracking)"
+        }
+      ]
+    },
+    {
+      "id": "deployment_context",
+      "name": "Deployment Context & Criticality",
+      "description": "Sectoral placement and public interaction scope under MeitY and RBI directives.",
+      "questions": [
+        {
+          "id": "public_facing",
+          "label": "Is the system directly exposed to external customers, users, or the general public?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "MeitY Sutra 4 (Accountability)"
+        },
+        {
+          "id": "sector",
+          "label": "Which primary industry or domain is the system deployed in?",
+          "type": "select",
+          "options": ["general_enterprise", "bfsi_rbi_regulated", "healthcare", "critical_infrastructure", "law_enforcement"],
+          "option_labels": {
+            "general_enterprise": "General Enterprise / Internal Operations",
+            "bfsi_rbi_regulated": "Banking, Financial Services & Insurance (RBI Supervised)",
+            "healthcare": "Healthcare & Clinical Diagnosis",
+            "critical_infrastructure": "Energy, Transport, Water, or Telecom Infrastructure",
+            "law_enforcement": "Law Enforcement & Judiciary"
+          },
+          "default": "general_enterprise",
+          "legal_basis": "RBI FREE-AI Framework; MeitY Critical AI Systems"
+        }
+      ]
+    },
+    {
+      "id": "autonomy",
+      "name": "Autonomy & Decision Impact",
+      "description": "Degree of automation and potential for material harm or legal/financial effects.",
+      "questions": [
+        {
+          "id": "decision_impact",
+          "label": "What degree of decision-making authority does the model possess?",
+          "type": "select",
+          "options": ["advisory_with_human_in_loop", "automated_operational", "automated_legal_or_financial_effect"],
+          "option_labels": {
+            "advisory_with_human_in_loop": "Advisory / Assistive with mandatory human review before action",
+            "automated_operational": "Automated operational tasks with low individual impact",
+            "automated_legal_or_financial_effect": "Fully automated decisions producing legal or significant financial impact (e.g., credit denial, employment, insurance)"
+          },
+          "default": "advisory_with_human_in_loop",
+          "legal_basis": "RBI FREE-AI Principle: Explainability & Human Agency; EU AI Act Art. 14"
+        },
+        {
+          "id": "human_override_available",
+          "label": "Is there a real-time, functioning human override mechanism for all model recommendations?",
+          "type": "boolean",
+          "default": true,
+          "legal_basis": "MeitY Sutra 4 (Accountability); RBI FREE-AI Governance"
+        },
+        {
+          "id": "autonomous_action_execution",
+          "label": "Can the model autonomously execute financial transactions, alter user balances, or modify external system states without human approval?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "RBI FREE-AI Operational Reliability"
+        }
+      ]
+    },
+    {
+      "id": "synthetic_content",
+      "name": "Synthetic Content & Provenance",
+      "description": "Obligations under IT (Intermediary Guidelines) Amendment Rules 2026 for synthetic media.",
+      "questions": [
+        {
+          "id": "generates_synthetic_media",
+          "label": "Does the system generate synthetic text, audio, images, or video representations?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "IT Rules 2026 Synthetic Content Mandate"
+        },
+        {
+          "id": "public_dissemination",
+          "label": "Is the generated synthetic media disseminated to the general public or open social platforms?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "IT Rules 2026 Rule 3(1)(b)"
+        },
+        {
+          "id": "automated_provenance_labelling",
+          "label": "Are automated metadata tags and persistent digital watermarks embedded into all generated synthetic content?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "IT Rules 2026 Technical Provenance Standard"
+        }
+      ]
+    },
+    {
+      "id": "eu_exposure",
+      "name": "European Union Cross-Exposure",
+      "description": "Extraterritorial application of EU AI Act (Regulation 2024/1689).",
+      "questions": [
+        {
+          "id": "serves_eu_residents",
+          "label": "Is the model or service offered to users located in the European Union, or does its output affect EU persons?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "EU AI Act Art. 2(1)(c) (Extraterritorial Scope)"
+        },
+        {
+          "id": "annex_iii_domain",
+          "label": "Does the application fall into an EU AI Act Annex III High-Risk domain (e.g. credit scoring, biometric categorization, HR/recruitment, essential services, education scoring)?",
+          "type": "boolean",
+          "default": false,
+          "legal_basis": "EU AI Act Art. 6 & Annex III"
+        }
+      ]
+    }
+  ]
+}

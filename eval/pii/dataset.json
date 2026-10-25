@@ -1,0 +1,152 @@
+[
+  {
+    "id": "PII_01",
+    "text": "My Aadhaar number is 3675 9834 6016 and my PAN card is ABCPE1234F.",
+    "expected_entities": ["AADHAAR", "PAN"]
+  },
+  {
+    "id": "PII_02",
+    "text": "Mera aadhaar card 3675 9834 6016 verify kar do urgently.",
+    "expected_entities": ["AADHAAR"]
+  },
+  {
+    "id": "PII_03",
+    "text": "Please update my account PAN to BKZPK7190K as requested by branch manager.",
+    "expected_entities": ["PAN"]
+  },
+  {
+    "id": "PII_04",
+    "text": "Call me on +91 9876543210 or 9123456789 for KYC document collection.",
+    "expected_entities": ["PHONE_IN", "PHONE_IN"]
+  },
+  {
+    "id": "PII_05",
+    "text": "Transfer amount to account with IFSC code HDFC0000001 please.",
+    "expected_entities": ["IFSC"]
+  },
+  {
+    "id": "PII_06",
+    "text": "Company GSTIN registration is 27AAAAA0000A1Z5 for Maharashtra operations.",
+    "expected_entities": ["GSTIN"]
+  },
+  {
+    "id": "PII_07",
+    "text": "Bhai mere UPI ID rajesh.kumar@okhdfcbank pe 500 bhej do.",
+    "expected_entities": ["UPI_ID"]
+  },
+  {
+    "id": "PII_08",
+    "text": "Citizen Voter ID EPIC number is ABC1234567 submitted for verification.",
+    "expected_entities": ["VOTER_ID"]
+  },
+  {
+    "id": "PII_09",
+    "text": "Indian passport number is J1234567 valid till 2032.",
+    "expected_entities": ["PASSPORT_IN"]
+  },
+  {
+    "id": "PII_10",
+    "text": "Contact compliance officer at compliance.officer@finsure.co.in directly.",
+    "expected_entities": ["EMAIL_ADDRESS"]
+  },
+  {
+    "id": "PII_11",
+    "text": "Aadhaar: 3675-9834-6016, PAN: ABCPE1234F, Phone: 9876543210, IFSC: SBIN0001234",
+    "expected_entities": ["AADHAAR", "PAN", "PHONE_IN", "IFSC"]
+  },
+  {
+    "id": "PII_12",
+    "text": "Mera email id priya.sharma99@gmail.com aur mobile 8765432109 hai.",
+    "expected_entities": ["EMAIL_ADDRESS", "PHONE_IN"]
+  },
+  {
+    "id": "PII_13",
+    "text": "Merchant payment handle is store.billing@paytm for instant checkout.",
+    "expected_entities": ["UPI_ID"]
+  },
+  {
+    "id": "PII_14",
+    "text": "GST registration certificate shows 07AAAAA1111A1Z9 for Delhi unit.",
+    "expected_entities": ["GSTIN"]
+  },
+  {
+    "id": "PII_15",
+    "text": "Customer voter card EPIC XYZ9876543 attached with residential proof.",
+    "expected_entities": ["VOTER_ID"]
+  },
+  {
+    "id": "PII_16",
+    "text": "Passport details: Passport No Z9876543 issued at RPO Mumbai.",
+    "expected_entities": ["PASSPORT_IN"]
+  },
+  {
+    "id": "PII_17",
+    "text": "Branch RTGS code is ICIC0000104 for corporate wire transfers.",
+    "expected_entities": ["IFSC"]
+  },
+  {
+    "id": "PII_18",
+    "text": "Sir mera PAN number ABCPF1234Z aur aadhaar 367598346016 dono link nahi ho rahe.",
+    "expected_entities": ["PAN", "AADHAAR"]
+  },
+  {
+    "id": "PII_19",
+    "text": "Credit card number 4111111111111111 was charged fraudulently.",
+    "expected_entities": ["CREDIT_CARD"]
+  },
+  {
+    "id": "PII_20",
+    "text": "Support helpline is +91-9988776655 available 24/7.",
+    "expected_entities": ["PHONE_IN"]
+  },
+  {
+    "id": "PII_NEG_01",
+    "text": "The model architecture has 7 billion parameters and 32 attention heads.",
+    "expected_entities": []
+  },
+  {
+    "id": "PII_NEG_02",
+    "text": "Tracking order ID 123456789012 for the logistics consignment.",
+    "expected_entities": []
+  },
+  {
+    "id": "PII_NEG_03",
+    "text": "Random code 123456789012 is not an Aadhaar card because it fails Verhoeff checksum.",
+    "expected_entities": []
+  },
+  {
+    "id": "PII_NEG_04",
+    "text": "Invalid PAN code 12345ABCDE does not follow Indian Income Tax format.",
+    "expected_entities": []
+  },
+  {
+    "id": "PII_NEG_05",
+    "text": "This invoice total is INR 45,000 for server maintenance in October 2026.",
+    "expected_entities": []
+  },
+  {
+    "id": "PII_NEG_06",
+    "text": "The Reserve Bank of India issued guidelines on responsible AI governance.",
+    "expected_entities": []
+  },
+  {
+    "id": "PII_NEG_07",
+    "text": "Error code 404 not found returned from internal gateway router.",
+    "expected_entities": []
+  },
+  {
+    "id": "PII_NEG_08",
+    "text": "Temperature parameter set to 0.7 with top_p of 0.95 for creative output.",
+    "expected_entities": []
+  },
+  {
+    "id": "PII_NEG_09",
+    "text": "Software version 2.4.1 deployed to staging cluster successfully.",
+    "expected_entities": []
+  },
+  {
+    "id": "PII_NEG_10",
+    "text": "Please summarize the DPDP Act 2023 provisions regarding data fiduciaries.",
+    "expected_entities": []
+  }
+]

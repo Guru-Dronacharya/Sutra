@@ -1,0 +1,20 @@
+================================================================================
+INSTRUMENT: European Union Artificial Intelligence Act (Regulation 2024/1689)
+STATUS: SAMPLE – NOT OFFICIAL TEXT. FOR DEMO & BENCHMARK PURPOSES ONLY.
+DISCLAIMER: Decision-support information only; not legal advice.
+================================================================================
+
+[ARTICLE 2] Scope and Extraterritorial Application
+[SAMPLE – NOT OFFICIAL TEXT] This Regulation applies to providers placing on the market or putting into service AI systems in the Union, irrespective of whether those providers are established in the Union or in a third country, where the output produced by the system is intended to be used in the Union.
+
+[ARTICLE 5] Prohibited Artificial Intelligence Practices
+[SAMPLE – NOT OFFICIAL TEXT] The following AI practices are strictly prohibited: (a) deploy subliminal, manipulative, or deceptive techniques; (b) exploit vulnerabilities of specific groups; (c) social scoring of natural persons leading to detrimental treatment; (d) real-time remote biometric identification in publicly accessible spaces for law enforcement.
+
+[ARTICLE 6] Classification Rules for High-Risk AI Systems
+[SAMPLE – NOT OFFICIAL TEXT] AI systems intended to be used as safety components of products or listed in Annex III (including biometric identification, critical infrastructure management, education scoring, employment/recruitment, essential private/public services, credit evaluation) are classified as High-Risk AI systems.
+
+[ARTICLE 10] Data and Data Governance
+[SAMPLE – NOT OFFICIAL TEXT] High-risk AI systems which make use of techniques involving the training of AI models shall be developed on the basis of training, validation, and testing datasets that meet quality criteria, including relevant data governance measures and examination for possible biases.
+
+[ARTICLE 14] Human Oversight Requirements
+[SAMPLE – NOT OFFICIAL TEXT] High-risk AI systems shall be designed and developed in such a way, including with appropriate human-machine interface tools, that they can be effectively overseen by natural persons during the period in which they are in use, with capabilities to intervene, override, or interrupt operations.

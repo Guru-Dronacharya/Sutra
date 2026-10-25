@@ -1,0 +1,17 @@
+================================================================================
+INSTRUMENT: RBI FREE-AI Framework for Regulated Entities (Aug 2025)
+STATUS: SAMPLE – NOT OFFICIAL TEXT. FOR DEMO & BENCHMARK PURPOSES ONLY.
+DISCLAIMER: Decision-support information only; not legal advice.
+================================================================================
+
+[PRINCIPLE F] FREE-AI Principle F: Fairness
+[SAMPLE – NOT OFFICIAL TEXT] Regulated entities deploying AI in underwriting, credit risk assessment, loan approvals, or insurance pricing must ensure algorithmic fairness. Models must not use protected attributes or demographic proxies that lead to discriminatory lending practices.
+
+[PRINCIPLE R] FREE-AI Principle R: Reliability
+[SAMPLE – NOT OFFICIAL TEXT] Financial AI applications must possess operational resilience, bounded error margins, real-time drift monitoring, and fail-safe fallback modes to ensure continuity of critical banking services during technical anomalies.
+
+[PRINCIPLE E1] FREE-AI Principle E: Explainability
+[SAMPLE – NOT OFFICIAL TEXT] Regulated entities must ensure that any automated adverse decision (e.g. credit denial, account suspension, or risk escalation) is accompanied by a reasoned explanation detailing key contributing factors.
+
+[PRINCIPLE E2] FREE-AI Principle E: Ethics
+[SAMPLE – NOT OFFICIAL TEXT] AI systems in banking must avoid deceptive dark patterns, manipulative nudging, predatory financial product recommendations, or behavioral targeting exploiting consumer vulnerability.

@@ -1,0 +1,86 @@
+{
+  "summary": {
+    "total_corpus_chunks": 66,
+    "scenarios_evaluated": 3,
+    "avg_noise_reduction_vs_unfiltered_pct": 66.7,
+    "avg_noise_reduction_vs_tier_only_pct": 66.7,
+    "sutra_precision": 1.0
+  },
+  "scenarios": [
+    {
+      "scenario": "India Retail Banking FAQ Assistant",
+      "tier": "low",
+      "exposure": "india_only",
+      "regime_1_no_filter": {
+        "retrieved": 10,
+        "applicable": 0,
+        "spurious_obligations": 10,
+        "precision": 0.0
+      },
+      "regime_2_tier_only": {
+        "retrieved": 10,
+        "applicable": 8,
+        "spurious_obligations": 2,
+        "precision": 0.8
+      },
+      "regime_3_sutra_filtered": {
+        "retrieved": 10,
+        "applicable": 10,
+        "spurious_obligations": 0,
+        "precision": 1.0
+      },
+      "compliance_noise_reduction_vs_unfiltered_pct": 100.0,
+      "compliance_noise_reduction_vs_tier_only_pct": 100.0
+    },
+    {
+      "scenario": "India Automated Loan Underwriting Copilot",
+      "tier": "high",
+      "exposure": "india_only",
+      "regime_1_no_filter": {
+        "retrieved": 10,
+        "applicable": 10,
+        "spurious_obligations": 0,
+        "precision": 1.0
+      },
+      "regime_2_tier_only": {
+        "retrieved": 10,
+        "applicable": 10,
+        "spurious_obligations": 0,
+        "precision": 1.0
+      },
+      "regime_3_sutra_filtered": {
+        "retrieved": 10,
+        "applicable": 10,
+        "spurious_obligations": 0,
+        "precision": 1.0
+      },
+      "compliance_noise_reduction_vs_unfiltered_pct": 0.0,
+      "compliance_noise_reduction_vs_tier_only_pct": 0.0
+    },
+    {
+      "scenario": "EU-Exposed Wealth Advisory Assistant",
+      "tier": "medium",
+      "exposure": "india_plus_eu",
+      "regime_1_no_filter": {
+        "retrieved": 10,
+        "applicable": 6,
+        "spurious_obligations": 4,
+        "precision": 0.6
+      },
+      "regime_2_tier_only": {
+        "retrieved": 10,
+        "applicable": 8,
+        "spurious_obligations": 2,
+        "precision": 0.8
+      },
+      "regime_3_sutra_filtered": {
+        "retrieved": 10,
+        "applicable": 10,
+        "spurious_obligations": 0,
+        "precision": 1.0
+      },
+      "compliance_noise_reduction_vs_unfiltered_pct": 100.0,
+      "compliance_noise_reduction_vs_tier_only_pct": 100.0
+    }
+  ]
+}

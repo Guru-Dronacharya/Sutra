@@ -1,0 +1,119 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: sutra_postgres
+    environment:
+      POSTGRES_USER: sutra
+      POSTGRES_PASSWORD: sutra123
+      POSTGRES_DB: sutra_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sutra -d sutra_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: services/api/Dockerfile
+    container_name: sutra_api
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://sutra:sutra123@postgres:5432/sutra_db
+      - SYNC_DATABASE_URL=postgresql+psycopg2://sutra:sutra123@postgres:5432/sutra_db
+      - API_PORT=8000
+      - AUDIT_URL=http://audit:8002
+      - AUDIT_SERVICE_TOKEN=sutra_audit_internal_service_token_xyz
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  gateway:
+    build:
+      context: .
+      dockerfile: services/gateway/Dockerfile
+    container_name: sutra_gateway
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://sutra:sutra123@postgres:5432/sutra_db
+      - SYNC_DATABASE_URL=postgresql+psycopg2://sutra:sutra123@postgres:5432/sutra_db
+      - GATEWAY_PORT=8001
+      - AUDIT_URL=http://audit:8002
+      - AUDIT_SERVICE_TOKEN=sutra_audit_internal_service_token_xyz
+      - ML_URL=http://ml:8004
+      - INJECTION_BACKEND=fallback
+      - UPSTREAM_PROVIDER=mock
+    ports:
+      - "8001:8001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      audit:
+        condition: service_started
+    restart: unless-stopped
+
+  audit:
+    build:
+      context: .
+      dockerfile: services/audit/Dockerfile
+    container_name: sutra_audit
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://sutra:sutra123@postgres:5432/sutra_db
+      - SYNC_DATABASE_URL=postgresql+psycopg2://sutra:sutra123@postgres:5432/sutra_db
+      - AUDIT_PORT=8002
+      - AUDIT_SERVICE_TOKEN=sutra_audit_internal_service_token_xyz
+    ports:
+      - "8002:8002"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  rag:
+    build:
+      context: .
+      dockerfile: services/rag/Dockerfile
+    container_name: sutra_rag
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://sutra:sutra123@postgres:5432/sutra_db
+      - SYNC_DATABASE_URL=postgresql+psycopg2://sutra:sutra123@postgres:5432/sutra_db
+      - RAG_PORT=8003
+      - VECTOR_STORE=chroma
+    ports:
+      - "8003:8003"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  ml:
+    build:
+      context: .
+      dockerfile: services/ml/Dockerfile
+    container_name: sutra_ml
+    environment:
+      - ML_PORT=8004
+      - INJECTION_BACKEND=fallback
+    ports:
+      - "8004:8004"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: sutra_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+      - gateway
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

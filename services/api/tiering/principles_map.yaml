@@ -1,0 +1,94 @@
+version: "1.0.0"
+disclaimer: "Decision-support information only; not legal advice."
+title: "Sutra Regulatory Principles Mapping Dictionary"
+
+principles:
+  meity_sutra_1_safety_trust:
+    framework: "MeitY India AI Governance Guidelines (Nov 2025)"
+    sutra: "Sutra 1: Safety & Trust"
+    pillar: "Pillar 5: Safety & Harm Prevention"
+    description: "AI systems must be designed, developed, and deployed to prevent harm to individuals, society, and critical infrastructure."
+
+  meity_sutra_2_fairness:
+    framework: "MeitY India AI Governance Guidelines (Nov 2025)"
+    sutra: "Sutra 2: Fairness & Equality"
+    pillar: "Pillar 3: Fairness & Non-discrimination"
+    description: "AI models must avoid systemic bias or unjust discrimination against protected demographic groups."
+
+  meity_sutra_3_transparency:
+    framework: "MeitY India AI Governance Guidelines (Nov 2025)"
+    sutra: "Sutra 3: Transparency & Explainability"
+    pillar: "Pillar 4: Transparency & Accountability"
+    description: "AI system operations, capabilities, limitations, and synthetic outputs must be disclosed clearly to stakeholders."
+
+  meity_sutra_4_accountability:
+    framework: "MeitY India AI Governance Guidelines (Nov 2025)"
+    sutra: "Sutra 4: Accountability & Human Agency"
+    pillar: "Pillar 6: Contestability & Human Oversight"
+    description: "Ultimate accountability rests with human operators and deploying organizations; decisions must be subject to human override."
+
+  meity_sutra_5_inclusivity:
+    framework: "MeitY India AI Governance Guidelines (Nov 2025)"
+    sutra: "Sutra 5: Inclusivity & Linguistic Diversity"
+    pillar: "Pillar 3: Fairness & Non-discrimination"
+    description: "AI solutions deployed in India should support diverse languages, scripts, and protect vulnerable socioeconomic groups."
+
+  meity_sutra_6_privacy:
+    framework: "MeitY India AI Governance Guidelines (Nov 2025)"
+    sutra: "Sutra 6: Privacy & Security"
+    pillar: "Pillar 2: Privacy Protection"
+    description: "Rigorous personal data protection by design, data minimization, and protection against unauthorized extraction."
+
+  meity_sutra_7_human_centricity:
+    framework: "MeitY India AI Governance Guidelines (Nov 2025)"
+    sutra: "Sutra 7: Human-Centric Innovation"
+    pillar: "Pillar 1: Robustness & Security"
+    description: "AI must serve public welfare, enhance human capabilities, and align with societal constitutional values."
+
+  rbi_free_ai_fairness:
+    framework: "RBI FREE-AI Framework (Aug 2025)"
+    sutra: "FREE-AI Principle F: Fairness"
+    pillar: "Algorithmic Equity in Credit & Underwriting"
+    description: "Financial AI systems must ensure equitable outcomes across demographic cohorts and avoid discriminatory proxy variables."
+
+  rbi_free_ai_reliability:
+    framework: "RBI FREE-AI Framework (Aug 2025)"
+    sutra: "FREE-AI Principle R: Reliability"
+    pillar: "Operational Resilience & Fault Tolerance"
+    description: "High availability, bounded error rates, drift monitoring, and fail-safe fallback modes for financial workflows."
+
+  rbi_free_ai_explainability:
+    framework: "RBI FREE-AI Framework (Aug 2025)"
+    sutra: "FREE-AI Principle E: Explainability"
+    pillar: "Reasoned Adverse Action Notices"
+    description: "Right of consumers to receive understandable, actionable explanations for automated adverse financial decisions."
+
+  rbi_free_ai_ethics:
+    framework: "RBI FREE-AI Framework (Aug 2025)"
+    sutra: "FREE-AI Principle E: Ethics"
+    pillar: "Consumer Welfare & Dark Patterns Prevention"
+    description: "Ethical boundaries preventing predatory targeting, manipulative nudging, or deceptive product recommendations."
+
+  dpdp_privacy:
+    framework: "Digital Personal Data Protection Act 2023"
+    sutra: "DPDP Sec. 4 & 6: Lawful Processing & Consent"
+    pillar: "Consent & Purpose Limitation"
+    description: "Processing personal data only for specific, lawful purposes with affirmative, unambiguous consent."
+
+  dpdp_accountability:
+    framework: "Digital Personal Data Protection Act 2023"
+    sutra: "DPDP Sec. 8: General Obligations of Data Fiduciary"
+    pillar: "Technical Safeguards & Auditability"
+    description: "Duty to implement technical and organizational measures to ensure compliance and data protection."
+
+  dpdp_children_protection:
+    framework: "Digital Personal Data Protection Act 2023"
+    sutra: "DPDP Sec. 9: Processing of Children's Personal Data"
+    pillar: "Verifiable Parental Consent & No Tracking"
+    description: "Strict prohibition on behavioral monitoring, targeted advertising, or processing likely to cause detrimental effect on children."
+
+  it_rules_2026_provenance:
+    framework: "IT (Intermediary Guidelines) Amendment Rules 2026"
+    sutra: "IT Rules 2026 Rule 3(1)(b): Synthetic Content Labelling"
+    pillar: "Metadata Watermarking & Synthetic Provenance"
+    description: "Mandatory prominent labelling and embedded technical provenance metadata for all synthetically generated audio, video, or text."

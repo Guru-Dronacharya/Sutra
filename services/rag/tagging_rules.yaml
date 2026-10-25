@@ -1,0 +1,154 @@
+version: "1.0.0"
+disclaimer: "Decision-support information only; not legal advice."
+title: "Sutra Regulatory Tagging & Tier Applicability Rules"
+
+instruments:
+  dpdp_act_2023:
+    name: "Digital Personal Data Protection Act, 2023"
+    framework: "india"
+    section_pattern: r"\[SECTION\s+([^\]]+)\]"
+    rules:
+      - section_id: "SECTION 4"
+        tiers: ["low", "medium", "high", "prohibited"]
+        keywords: ["lawful grounds", "consent", "purpose"]
+      - section_id: "SECTION 5"
+        tiers: ["low", "medium", "high"]
+        keywords: ["notice", "transparency", "grievance"]
+      - section_id: "SECTION 6"
+        tiers: ["low", "medium", "high"]
+        keywords: ["consent", "affirmative action", "necessary"]
+      - section_id: "SECTION 8"
+        tiers: ["medium", "high", "prohibited"]
+        keywords: ["security safeguards", "breach reporting", "fiduciary"]
+      - section_id: "SECTION 9"
+        tiers: ["high", "prohibited"]
+        keywords: ["children", "parental consent", "tracking", "behavioral"]
+      - section_id: "SECTION 10"
+        tiers: ["high", "prohibited"]
+        keywords: ["significant data fiduciary", "dpia", "audit", "dpo"]
+      - section_id: "SECTION 16"
+        tiers: ["medium", "high"]
+        keywords: ["cross-border", "transfer", "localization"]
+
+  dpdp_rules_2025:
+    name: "Digital Personal Data Protection Rules, 2025"
+    framework: "india"
+    section_pattern: r"\[RULE\s+([^\]]+)\]"
+    rules:
+      - section_id: "RULE 3"
+        tiers: ["low", "medium", "high"]
+        keywords: ["notice format", "languages", "retention"]
+      - section_id: "RULE 7"
+        tiers: ["medium", "high", "prohibited"]
+        keywords: ["breach notification", "72 hours", "forensic"]
+      - section_id: "RULE 11"
+        tiers: ["high", "prohibited"]
+        keywords: ["parental consent", "children", "tokenized"]
+      - section_id: "RULE 14"
+        tiers: ["high", "prohibited"]
+        keywords: ["dpia", "algorithmic fairness", "discrimination"]
+
+  it_rules_2026:
+    name: "Information Technology (Intermediary Guidelines) Amendment Rules, 2026"
+    framework: "india"
+    section_pattern: r"\[RULE\s+([^\]]+)\]"
+    rules:
+      - section_id: "RULE 3(1)(b)"
+        tiers: ["medium", "high", "prohibited"]
+        keywords: ["synthetic media", "labelling", "deepfake"]
+      - section_id: "RULE 3(2)"
+        tiers: ["medium", "high", "prohibited"]
+        keywords: ["watermarking", "provenance", "c2pa"]
+      - section_id: "RULE 3(3)"
+        tiers: ["high", "prohibited"]
+        keywords: ["takedown", "24 hours", "impersonation"]
+
+  meity_guidelines_2025:
+    name: "MeitY India AI Governance Guidelines (Nov 2025)"
+    framework: "india"
+    section_pattern: r"\[(SUTRA\s+\d+|PILLAR\s+\d+)\]"
+    rules:
+      - section_id: "SUTRA 1"
+        tiers: ["medium", "high", "prohibited"]
+        keywords: ["safety", "trust", "red-teaming", "prompt injection"]
+      - section_id: "SUTRA 2"
+        tiers: ["medium", "high"]
+        keywords: ["fairness", "bias", "caste", "gender", "demographic"]
+      - section_id: "SUTRA 3"
+        tiers: ["low", "medium", "high"]
+        keywords: ["transparency", "explainability", "limitations"]
+      - section_id: "SUTRA 4"
+        tiers: ["high", "prohibited"]
+        keywords: ["accountability", "human oversight", "intervention"]
+      - section_id: "SUTRA 5"
+        tiers: ["low", "medium", "high"]
+        keywords: ["inclusivity", "linguistic", "diversity"]
+      - section_id: "SUTRA 6"
+        tiers: ["medium", "high", "prohibited"]
+        keywords: ["privacy", "pii", "exfiltration"]
+      - section_id: "SUTRA 7"
+        tiers: ["low", "medium", "high"]
+        keywords: ["human-centric", "ethics"]
+      - section_id: "PILLAR 1"
+        tiers: ["high", "prohibited"]
+        keywords: ["robustness", "fail-safe", "out-of-distribution"]
+      - section_id: "PILLAR 4"
+        tiers: ["medium", "high", "prohibited"]
+        keywords: ["audit trail", "tamper-evident", "ledger"]
+
+  rbi_free_ai_2025:
+    name: "RBI FREE-AI Framework (Aug 2025)"
+    framework: "india"
+    section_pattern: r"\[PRINCIPLE\s+([^\]]+)\]"
+    rules:
+      - section_id: "PRINCIPLE F"
+        tiers: ["medium", "high", "prohibited"]
+        keywords: ["fairness", "underwriting", "credit", "bias"]
+      - section_id: "PRINCIPLE R"
+        tiers: ["medium", "high", "prohibited"]
+        keywords: ["reliability", "drift", "resilience", "fallback"]
+      - section_id: "PRINCIPLE E1"
+        tiers: ["high", "prohibited"]
+        keywords: ["explainability", "adverse decision", "credit denial"]
+      - section_id: "PRINCIPLE E2"
+        tiers: ["medium", "high", "prohibited"]
+        keywords: ["ethics", "dark patterns", "manipulative"]
+
+  eu_ai_act_2024:
+    name: "European Union Artificial Intelligence Act (Regulation 2024/1689)"
+    framework: "eu"
+    section_pattern: r"\[ARTICLE\s+([^\]]+)\]"
+    rules:
+      - section_id: "ARTICLE 2"
+        tiers: ["low", "medium", "high", "prohibited"]
+        keywords: ["scope", "extraterritorial"]
+      - section_id: "ARTICLE 5"
+        tiers: ["prohibited"]
+        keywords: ["prohibited", "social scoring", "subliminal", "biometric"]
+      - section_id: "ARTICLE 6"
+        tiers: ["high"]
+        keywords: ["high-risk", "annex iii", "classification"]
+      - section_id: "ARTICLE 10"
+        tiers: ["high"]
+        keywords: ["data governance", "training data", "bias"]
+      - section_id: "ARTICLE 14"
+        tiers: ["high"]
+        keywords: ["human oversight", "override", "intervention"]
+
+  nist_ai_rmf_1_0:
+    name: "NIST AI Risk Management Framework (AI RMF 1.0)"
+    framework: "reference"
+    section_pattern: r"\[([^\]]+)\]"
+    rules:
+      - section_id: "GOVERN 1.1"
+        tiers: ["low", "medium", "high"]
+        keywords: ["governance", "risk tolerance"]
+      - section_id: "MAP 1.2"
+        tiers: ["medium", "high"]
+        keywords: ["contextual scope", "impact assessment"]
+      - section_id: "MEASURE 2.1"
+        tiers: ["medium", "high"]
+        keywords: ["tevv", "verification", "metrics"]
+      - section_id: "MANAGE 3.1"
+        tiers: ["high", "prohibited"]
+        keywords: ["monitoring", "circuit breakers", "incident"]

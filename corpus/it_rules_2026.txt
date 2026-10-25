@@ -1,0 +1,14 @@
+================================================================================
+INSTRUMENT: Information Technology (Intermediary Guidelines) Amendment Rules, 2026
+STATUS: SAMPLE – NOT OFFICIAL TEXT. FOR DEMO & BENCHMARK PURPOSES ONLY.
+DISCLAIMER: Decision-support information only; not legal advice.
+================================================================================
+
+[RULE 3(1)(b)] Obligations for Synthetic Media & AI-Generated Content
+[SAMPLE – NOT OFFICIAL TEXT] An intermediary or deploying platform shall not host, display, upload, modify, publish, or transmit any synthetically generated audio, visual, or text representations that mimic a natural person or real-world event without prominent visual and machine-readable labelling indicating that the content has been artificially generated or substantially altered by AI.
+
+[RULE 3(2)] Technical Provenance and Metadata Watermarking
+[SAMPLE – NOT OFFICIAL TEXT] Any deploying organization generating synthetic representations must embed persistent digital watermarks, cryptographic provenance metadata (aligned with open standards such as C2PA), and tamper-evident origin markers throughout the lifecycle of the synthetic output.
+
+[RULE 3(3)] Expedited Takedown Timelines for Non-Consensual Deepfakes
+[SAMPLE – NOT OFFICIAL TEXT] Upon receipt of a complaint concerning non-consensual sexually explicit content, deepfake impersonation, or deceptive synthetic media, the intermediary must disable access or remove such content expeditiously and in any event within 24 hours from the receipt of the complaint.

@@ -1,0 +1,26 @@
+================================================================================
+INSTRUMENT: Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023)
+STATUS: SAMPLE – NOT OFFICIAL TEXT. FOR DEMO & BENCHMARK PURPOSES ONLY.
+DISCLAIMER: Decision-support information only; not legal advice.
+================================================================================
+
+[SECTION 4] Lawful Grounds for Processing Personal Data
+[SAMPLE – NOT OFFICIAL TEXT] Personal data may be processed only for a lawful purpose for which the Data Principal has given consent, or for certain legitimate uses recognized under Section 7. Processing without an explicit legal basis constitutes an actionable statutory breach.
+
+[SECTION 5] Notice and Transparency Requirements
+[SAMPLE – NOT OFFICIAL TEXT] Every request for consent must be preceded by or accompanied with a notice informing the Data Principal of the personal data to be processed, the specific purpose of processing, the manner in which the Data Principal may exercise rights, and the grievance redressal mechanism.
+
+[SECTION 6] Consent Standards and Verification
+[SAMPLE – NOT OFFICIAL TEXT] Consent must be free, specific, informed, unconditional, and unambiguous with clear affirmative action. Consent signifies agreement to the processing of personal data for the specified purpose, and is limited only to such personal data as is strictly necessary for that purpose.
+
+[SECTION 8] General Obligations of Data Fiduciaries
+[SAMPLE – NOT OFFICIAL TEXT] A Data Fiduciary must implement technical and organizational measures to ensure compliance. The Data Fiduciary must protect personal data in its custody by taking reasonable security safeguards to prevent personal data breaches, and must inform the Board and affected Data Principals in the event of any security incident.
+
+[SECTION 9] Processing of Personal Data of Children
+[SAMPLE – NOT OFFICIAL TEXT] A Data Fiduciary must obtain verifiable consent from the parent or lawful guardian before processing any personal data of a child. A Data Fiduciary shall not undertake tracking or behavioral monitoring of children or targeted advertising directed at children, nor process data likely to cause any detrimental effect on children.
+
+[SECTION 10] Significant Data Fiduciaries (SDF) Criteria
+[SAMPLE – NOT OFFICIAL TEXT] The Central Government may classify Data Fiduciaries as Significant Data Fiduciaries based on volume and sensitivity of data, risk of harm to individuals, impact on sovereignty and electoral democracy, or public order. SDFs must appoint a resident Data Protection Officer (DPO), engage independent data auditors, and perform periodic Data Protection Impact Assessments (DPIA).
+
+[SECTION 16] Cross-Border Data Transfers
+[SAMPLE – NOT OFFICIAL TEXT] The Central Government may restrict transfer of personal data by a Data Fiduciary for processing to countries outside India through designated negative list notifications, subject to applicable sectoral data localization mandates.

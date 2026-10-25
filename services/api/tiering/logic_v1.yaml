@@ -1,0 +1,109 @@
+version: "1.0.0"
+disclaimer: "Decision-support information only; not legal advice."
+title: "Sutra Tiering Engine Configuration v1.0.0"
+
+category_weights:
+  data_sensitivity: 0.25
+  deployment_context: 0.20
+  autonomy: 0.30
+  synthetic_content: 0.15
+  eu_exposure: 0.10
+
+score_thresholds:
+  low_max: 15.0
+  medium_max: 45.0
+  # >= 45 is High
+
+points:
+  # Data Sensitivity (Max 100 before weighting)
+  processes_personal_data: 20
+  sensitive_data_categories:
+    financial: 25
+    health: 30
+    biometric: 35
+    caste_or_religion: 35
+    children: 35
+    none: 0
+  data_volume_scale:
+    low: 0
+    medium: 15
+    high: 30
+  processes_children_data: 35
+
+  # Deployment Context (Max 100 before weighting)
+  public_facing: 30
+  sector:
+    general_enterprise: 10
+    bfsi_rbi_regulated: 35
+    healthcare: 40
+    critical_infrastructure: 50
+    law_enforcement: 50
+
+  # Autonomy (Max 100 before weighting)
+  decision_impact:
+    advisory_with_human_in_loop: 10
+    automated_operational: 35
+    automated_legal_or_financial_effect: 60
+  human_override_available:
+    true: 0
+    false: 30
+  autonomous_action_execution: 30
+
+  # Synthetic Content (Max 100 before weighting)
+  generates_synthetic_media: 25
+  public_dissemination: 35
+  automated_provenance_labelling:
+    true: 0
+    false: 40
+
+  # EU Exposure (Max 100 before weighting)
+  serves_eu_residents: 40
+  annex_iii_domain: 60
+
+hard_rules:
+  prohibited:
+    - condition: "social_scoring == True"
+      reason: "Social scoring of individuals leading to detrimental treatment is strictly prohibited under EU AI Act Art. 5(1)(c) and MeitY Sutra 1."
+      maps_to_principles: ["meity_sutra_1_safety_trust", "rbi_free_ai_ethics"]
+    - condition: "real_time_biometric_surveillance == True"
+      reason: "Real-time remote biometric surveillance in public spaces is prohibited under EU AI Act Art. 5(1)(d) and DPDP Sec. 9 privacy guarantees."
+      maps_to_principles: ["meity_sutra_1_safety_trust", "dpdp_privacy"]
+    - condition: "manipulative_subliminal_techniques == True"
+      reason: "Subliminal or manipulative techniques distorting human behavior are prohibited under EU AI Act Art. 5(1)(a)."
+      maps_to_principles: ["meity_sutra_1_safety_trust", "rbi_free_ai_ethics"]
+    - condition: "vulnerability_exploitation == True"
+      reason: "Exploiting age, physical/mental disability, or socio-economic vulnerabilities is prohibited under EU AI Act Art. 5(1)(b)."
+      maps_to_principles: ["meity_sutra_5_inclusivity", "rbi_free_ai_fairness"]
+
+  high_escalation:
+    - condition: "decision_impact == 'automated_legal_or_financial_effect' and processes_personal_data == True"
+      reason: "Automated decisions producing legal or significant financial impact on individuals processing personal data escalate to High risk under RBI FREE-AI and DPDP Act."
+      maps_to_principles: ["rbi_free_ai_explainability", "dpdp_accountability", "meity_sutra_4_accountability"]
+    - condition: "sector in ['critical_infrastructure', 'law_enforcement']"
+      reason: "Deployment in critical national infrastructure or law enforcement mandates High risk safeguards under MeitY India AI Guidelines."
+      maps_to_principles: ["meity_sutra_1_safety_trust", "meity_pillar_robustness"]
+    - condition: "processes_children_data == True and public_facing == True"
+      reason: "Processing children's data in public-facing applications triggers heightened obligations under DPDP Act 2023 Section 9."
+      maps_to_principles: ["dpdp_children_protection", "meity_sutra_1_safety_trust"]
+
+  medium_escalation:
+    - condition: "generates_synthetic_media == True and public_dissemination == True and automated_provenance_labelling == False"
+      reason: "Disseminating synthetic media publicly without provenance metadata or digital watermarks violates IT Rules 2026."
+      maps_to_principles: ["it_rules_2026_provenance", "meity_sutra_3_transparency"]
+    - condition: "sector == 'bfsi_rbi_regulated'"
+      reason: "Deployment in RBI-regulated banking, financial services, or insurance requires minimum Medium governance under RBI FREE-AI Framework."
+      maps_to_principles: ["rbi_free_ai_fairness", "rbi_free_ai_reliability"]
+
+eu_crosswalk:
+  base_mapping:
+    low: "minimal"
+    medium: "limited"
+    high: "high"
+    prohibited: "unacceptable"
+  overrides:
+    - condition: "annex_iii_domain == True"
+      target_eu_tier: "high"
+      reason: "Classified as High-Risk AI System under EU AI Act Annex III domain listing."
+    - condition: "is_prohibited == True"
+      target_eu_tier: "unacceptable"
+      reason: "Prohibited AI practice under EU AI Act Article 5."

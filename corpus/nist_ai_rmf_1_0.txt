@@ -1,0 +1,17 @@
+================================================================================
+INSTRUMENT: NIST AI Risk Management Framework (AI RMF 1.0)
+STATUS: SAMPLE – NOT OFFICIAL TEXT. FOR DEMO & BENCHMARK PURPOSES ONLY.
+DISCLAIMER: Decision-support information only; not legal advice.
+================================================================================
+
+[GOVERN 1.1] AI Governance Policies and Risk Tolerance
+[SAMPLE – NOT OFFICIAL TEXT] Legal and regulatory requirements involving AI are understood, managed, and integrated into organizational policies. Risk management processes are aligned with organizational risk appetite and enterprise risk strategies.
+
+[MAP 1.2] Contextual Scope and Impact Assessment
+[SAMPLE – NOT OFFICIAL TEXT] The AI system's target users, societal context, deployment environment, and potential for direct and indirect negative impacts on individuals and communities are mapped prior to deployment.
+
+[MEASURE 2.1] Test, Evaluation, Verification, and Validation (TEVV)
+[SAMPLE – NOT OFFICIAL TEXT] AI systems are formally evaluated for accuracy, robustness, reliability, security, bias, and privacy protection using measurable metrics across representative test sets.
+
+[MANAGE 3.1] Risk Treatment and Continuous Monitoring
+[SAMPLE – NOT OFFICIAL TEXT] Risks identified during mapping and measurement are mitigated, transferred, or avoided through continuous real-time monitoring, incident response protocols, and automated circuit breakers.
