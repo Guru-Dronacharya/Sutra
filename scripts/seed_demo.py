@@ -31,6 +31,7 @@ from services.common.models import (
     AuditDirection,
     AuditEntry,
     EUTier,
+    ExposureProfile,
     Finding,
     FindingStatus,
     GapReport,
@@ -177,7 +178,7 @@ def seed_demo_environment():
         (m_b.id, "Credit App Client", "sutra_live_credit_copilot_key_67890"),
     ]
     for mid, cname, raw_k in demo_keys:
-        pfx = raw_k[:8]
+        pfx = raw_k[:15]
         hsh = hash_api_key(raw_k)
         existing_cli = db.query(ApiClient).filter(ApiClient.key_prefix == pfx).first()
         if not existing_cli:
@@ -271,7 +272,7 @@ def seed_demo_environment():
         gap_rep = GapReport(
             model_id=m_a.id,
             policy_document_id=pol_doc.id,
-            exposure_profile="india_only",
+            exposure_profile=ExposureProfile.INDIA_ONLY,
             tier=RiskTier.LOW,
             summary={
                 "total_obligations": 7,

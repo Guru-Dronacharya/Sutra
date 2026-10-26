@@ -2,6 +2,18 @@
  * Centralized API Client for Sutra Monorepo Services.
  */
 
+const _fetch = window.fetch.bind(window);
+window.fetch = async (input: any, init?: any) => {
+  const res = await _fetch(input, init);
+  const url = String(typeof input === "string" ? input : input?.url ?? "");
+  if (res.status === 401 && !url.includes("/auth/login") && !url.includes("/v1/chat/completions")) {
+    localStorage.removeItem("sutra_token");
+    localStorage.removeItem("sutra_user");
+    window.location.href = "/login";
+  }
+  return res;
+};
+
 const isNginx = typeof window !== "undefined" && (window.location.port === "3000" || window.location.port === "");
 const API_BASE = isNginx ? "/api" : "http://localhost:8000";
 const GATEWAY_BASE = isNginx ? "/gateway" : "http://localhost:8001";

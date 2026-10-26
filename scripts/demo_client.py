@@ -53,7 +53,7 @@ def run_pipeline_offline(prompt: str) -> Dict[str, Any]:
     init_db()
     db = SyncSessionLocal()
 
-    pfx = DEMO_API_KEY[:8]
+    pfx = DEMO_API_KEY[:15]
     client = db.query(ApiClient).filter(ApiClient.key_prefix == pfx).first()
     if not client:
         return {"error": "API Key not found in database. Please run `make seed` first."}
