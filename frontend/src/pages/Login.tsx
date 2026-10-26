@@ -4,7 +4,7 @@ import { useAuth, DEMO_CREDENTIALS } from "../context/AuthContext";
 import { UserRole } from "../types";
 
 export const Login: React.FC = () => {
-  const { login } = useAuth();
+  const { user, login } = useAuth();
   const [email, setEmail] = useState("compliance@sutra.ai");
   const [password, setPassword] = useState("compliance123");
   const [error, setError] = useState<string | null>(null);
@@ -28,7 +28,7 @@ export const Login: React.FC = () => {
     setEmail(creds.email);
     setPassword(creds.pass);
   };
-
+  if (user) return <Navigate to="/models" replace />;
   return (
     <div className="min-h-screen bg-slate-950 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       {/* Disclaimer Banner */}
